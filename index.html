@@ -13,16 +13,16 @@
     <!-- Inserimento BOOTSTRAP -->
 
 </head>
-<body>
+<body class="bg-success">
     <!-- SEZIONE DEL TIMER -->
     <section id="timerSection" class="container text-center my-5">
         
-        <h1>Memory</h1>
+        <h1 class="fw-bolder p-3 text-warning">Simon Says</h1>
         <!-- CONTENITORE TIMER -->
-        <div id="timer" class="display-1">30</div>
+        <div id="timer" class="display-1 fw-bold">--</div>
         <!-- CONTENITORE TIMER -->
         <div>
-            <div id="timerMsg" class="display-6">Hai 30 secondi per ricordare più numeri possibile</div>
+            <div id="timerMsg" class="fst-italic display-6">Cerca di ricordare più numeri possibile</div>
         </div>
 
     </section>
@@ -31,27 +31,27 @@
     <!-- SEZIONE DEL TAVOLO DA GIOCO -->
     <section id="tableSection" class="container text-center">
         <!-- CONTENITORE NUMERI DI GIOCO -->
-        <div class="row my-3 px-5">
+        <div id="tablePick" class="row my-3 fw-bold fs-1">
             <div id="num1" class="col">
-            Column
+            num1
             </div>
             <div id="num2" class="col">
-            Column
+            num2
             </div>
             <div id="num3" class="col">
-            Column
+            num3
             </div>
             <div id="num4" class="col">
-            Column
+            num4
             </div>
             <div id="num5" class="col">
-            Column
+            num5
             </div>
         </div>
         <!-- /CONTENITORE NUMERI DI GIOCO -->
 
         <!-- CONTENITORE NUMERI DEL GIOCATORE -->
-        <form id="userPick" action="" class="row my-3 px-5">
+        <form id="userPick" action="" class="row my-3 px-5 d-none">
             <div class="col">   
                 <label for="userNum1"></label>
                 <input type="number" id="userNum1" name="userNum1" value="" required>
@@ -72,15 +72,20 @@
                 <label for="userNum5"></label>
                 <input type="number" id="userNum5" name="userNum5" value="" required>
             </div>
+
+            <!-- BOTTONE DI CONTROLLO DEL GIOCO -->
+             <div>
+            <button id="submit" type="submit" class=" btn btn-warning my-3 fw-bold">CONFERMA</button>
+             </div>
+            <!-- BOTTONE DI CONTROLLO DEL GIOCO -->
+
         </form>     
         <!-- /CONTENITORE NUMERI DEL GIOCATORE -->
 
-        <!-- BOTTONE DI CONTROLLO DEL GIOCO -->
-        <button id="actionBtn" type="button" class="btn btn-success my-3">CONFERMA</button>
-        <!-- BOTTONE DI CONTROLLO DEL GIOCO -->
+        
 
         <!-- CONTENITORE OUTPUT RISULTATO -->
-         <div id="gameResult" class="d-none">hai totalizzato:</div>
+         <div id="gameResult" class="d-none">risultati</div>
         <!-- /CONTENITORE OUTPUT RISULTATO -->
 
     </section>
