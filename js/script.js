@@ -48,6 +48,7 @@ const intervalCountDown = setInterval(() => {
 
     //SE il countdown arriva a 0 visualizza i messaggi e il form di inserimento dei numeri
     if (seconds === 0){
+        clearInterval(intervalCountDown) //ferma il timer quando arriva a 0
         timerElm.innerHTML ="Tempo scaduto!"
         timerMsgElm.innerHTML = (`Ora inserisci i numeri che ricordi`)
         tablePickElm.classList.add("d-none")
@@ -58,6 +59,7 @@ const intervalCountDown = setInterval(() => {
         timerElm.innerHTML = seconds
         seconds--
     }
+    console.log(seconds)
 }, 1000)
 
  //FORM FUNCTION
@@ -83,7 +85,7 @@ const intervalCountDown = setInterval(() => {
     gameResultElm.classList.remove("d-none")
     gameResultElm.classList.add("text-bg-success")
     if (userResult.length > 0){
-        gameResultElm.innerHTML = (`Il tuo punteggio è: ${userResult.length}, i tuoi nmeri indovinati : ${userResult} `)
+        gameResultElm.innerHTML = (`Il tuo punteggio è: ${userResult.length}, i tuoi numeri indovinati : ${userResult} `)
     } else if (userResult.length === 0) {
         gameResultElm.innerHTML = (`Nessun numero indovinato :( `)
     }
