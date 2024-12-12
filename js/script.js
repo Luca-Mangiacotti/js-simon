@@ -59,7 +59,6 @@ const intervalCountDown = setInterval(() => {
         timerElm.innerHTML = seconds
         seconds--
     }
-    console.log(seconds)
 }, 1000)
 
  //FORM FUNCTION
